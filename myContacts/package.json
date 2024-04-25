@@ -1,0 +1,22 @@
+{
+  "name": "contacts-manager",
+  "version": "1.0.0",
+  "description": "simple contacts manager",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hoooooojjjj/Learning-Nodejs.git"
+  },
+  "author": "sono",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hoooooojjjj/Learning-Nodejs/issues"
+  },
+  "homepage": "https://github.com/hoooooojjjj/Learning-Nodejs#readme",
+  "dependencies": {
+    "express": "^4.19.2"
+  }
+}
