@@ -8,9 +8,13 @@ app.get("/", (req, res) => {
   res.send("hello node");
 });
 
-// 연락처 전체 목록 가져오기
+// 연락처 전체 목록 가져오기 / 쿼리 파라미터
 app.get("/contacts", (req, res) => {
-  res.send("Contacts Page");
+  if (req.query.q && req.query.r) {
+    res.send(`Contacts Page : q = ${req.query.q}, r = ${req.query.r}`);
+  } else {
+    res.send("Contacts Page");
+  }
 });
 
 // 새로운 연락처 추가
