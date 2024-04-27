@@ -15,3 +15,5 @@
   - 익스프레스 미들웨어
     - 라우터 미들웨어(Router 객체)
     - 바디파서 미들웨어(express.json(), express.urlencoded())
+- MongoDB 사용
+  - MongoDB 연결
