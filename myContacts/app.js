@@ -1,7 +1,13 @@
 const express = require("express");
 
+// db conntact 가져오기
+const dbConntact = require("./config/dbConnact");
+
 // app이라는 이름을 가진 서버 만들기
 const app = express();
+
+// db conntact 실행
+dbConntact();
 
 // app 서버를 통해 서버 응답
 app.get("/", (req, res) => {
