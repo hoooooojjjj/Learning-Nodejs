@@ -43,6 +43,8 @@ app.get("/", (req, res) => {
 // });
 
 // app 에서 어떤 미들웨어를 사용했는지 알려줘야함
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
 app.use("/contacts", require("./routes/ContactRoutes"));
 
 // 서버 실행

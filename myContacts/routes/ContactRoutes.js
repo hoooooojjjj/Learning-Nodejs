@@ -17,7 +17,14 @@ router
   // 새로운 연락처 추가
   // 익스프레스 라우터 미들웨어 사용
   .post((req, res) => {
-    res.send("Create Contacts");
+    const { name, email, phone } = req.body;
+    if (!name || !email || !phone) {
+      res.send("필수값을 입력해주세요");
+    } else {
+      res.send(
+        `Create Contacts : name = ${name}, email = ${email}, phone = ${phone}`
+      );
+    }
   });
 
 router
