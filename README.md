@@ -17,3 +17,4 @@
     - 바디파서 미들웨어(express.json(), express.urlencoded())
 - MongoDB 사용
   - MongoDB 연결
+  - 스키마 정의하고 모델로 만들기
