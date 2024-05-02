@@ -18,3 +18,7 @@
 - MongoDB 사용
   - MongoDB 연결
   - 스키마 정의하고 모델로 만들기
+  - MVC 패턴
+    - Model 코드 구현
+    - View 코드 구현
+    - Controller 코드 구현
