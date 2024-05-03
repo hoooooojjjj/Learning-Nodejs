@@ -4,7 +4,13 @@ const express = require("express");
 const router = express.Router();
 
 // Contacts Controller 가져오기
-const getAllContact = require("../controllers/contactController");
+const {
+  getAllContact,
+  postOneContact,
+  getOneContact,
+  putOneContact,
+  deleteOneContact,
+} = require("../controllers/contactController");
 
 router
   .route("/")
@@ -13,33 +19,18 @@ router
   .get(getAllContact)
   // 새로운 연락처 추가
   // 익스프레스 라우터 미들웨어 사용
-  .post((req, res) => {
-    const { name, email, phone } = req.body;
-    if (!name || !email || !phone) {
-      res.send("필수값을 입력해주세요");
-    } else {
-      res.send(
-        `Create Contacts : name = ${name}, email = ${email}, phone = ${phone}`
-      );
-    }
-  });
+  .post(postOneContact);
 
 router
   .route("/:id")
   // 특정 연락처 가져오기(라우트 파라미터)
   // 익스프레스 라우터 미들웨어 사용
-  .get((req, res) => {
-    res.send(`View Contact for ID : ${req.params.id}`);
-  })
+  .get(getOneContact)
   // 특정 연락처 수정하기
   // 익스프레스 라우터 미들웨어 사용
-  .put((req, res) => {
-    res.send(`Update Contact for ID : ${req.params.id}`);
-  })
+  .put(putOneContact)
   // 특정 연락처 삭제하기
   // 익스프레스 라우터 미들웨어 사용
-  .delete((req, res) => {
-    res.send(`Delete Contact for ID : ${req.params.id}`);
-  });
+  .delete(deleteOneContact);
 
 module.exports = router;
